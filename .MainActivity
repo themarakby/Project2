@@ -1,0 +1,105 @@
+package com.example.marakby.practiseset2;
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.TextView;
+
+public class MainActivity extends AppCompatActivity {
+
+    int scoreA = 0;
+    int scoreB = 0;
+    int threeA = 0;
+    int twoA = 0;
+    int freeA = 0;
+    int threeB = 0;
+    int twoB = 0;
+    int freeB = 0;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+    }
+
+    public void threePointsA(View view) {
+        scoreA += 3;
+        TextView scoresOfTeamA = (TextView) findViewById(R.id.scoreTeamA);
+        scoresOfTeamA.setText("" + scoreA);
+        threeA += 1;
+        TextView threePointsA = (TextView) findViewById(R.id.threeA);
+        threePointsA.setText("" + threeA);
+    }
+
+    public void twoPointsA(View view) {
+        scoreA += 2;
+        TextView scoresOfTeamA = (TextView) findViewById(R.id.scoreTeamA);
+        scoresOfTeamA.setText("" + scoreA);
+        twoA += 1;
+        TextView twoPointsA = (TextView) findViewById(R.id.twoA);
+        twoPointsA.setText("" + twoA);
+    }
+
+    public void freeThrowA(View view) {
+        scoreA += 1;
+        TextView scoresOfTeamA = (TextView) findViewById(R.id.scoreTeamA);
+        scoresOfTeamA.setText("" + scoreA);
+        freeA += 1;
+        TextView freePointsA = (TextView) findViewById(R.id.freeA);
+        freePointsA.setText("" + freeA);
+    }
+
+    public void threePointsB(View view) {
+        scoreB += 3;
+        TextView scoresOfTeamB = (TextView) findViewById(R.id.scoreTeamB);
+        scoresOfTeamB.setText("" + scoreB);
+        threeB += 1;
+        TextView threePointsB = (TextView) findViewById(R.id.threeB);
+        threePointsB.setText("" + threeB);
+    }
+
+    public void twoPointsB(View view) {
+        scoreB += 2;
+        TextView scoresOfTeamB = (TextView) findViewById(R.id.scoreTeamB);
+        scoresOfTeamB.setText("" + scoreB);
+        twoB += 1;
+        TextView twoPointsB = (TextView) findViewById(R.id.twoB);
+        twoPointsB.setText("" + twoB);
+    }
+
+    public void freeThrowB(View view) {
+        scoreB += 1;
+        TextView scoresOfTeamB = (TextView) findViewById(R.id.scoreTeamB);
+        scoresOfTeamB.setText("" + scoreB);
+        freeB += 1;
+        TextView freePointsA = (TextView) findViewById(R.id.freeB);
+        freePointsA.setText("" + freeB);
+    }
+
+    public void reset(View view) {
+        scoreA = 0;
+        scoreB = 0;
+        threeA = 0;
+        twoA = 0;
+        freeA = 0;
+        threeB = 0;
+        twoB = 0;
+        freeB = 0;
+        TextView resetA = (TextView) findViewById(R.id.scoreTeamA);
+        resetA.setText("" + scoreA);
+        TextView resetB = (TextView) findViewById(R.id.scoreTeamB);
+        resetB.setText("" + scoreB);
+        TextView resetThreeA = (TextView) findViewById(R.id.threeA);
+        resetThreeA.setText("" + threeA);
+        TextView resetTwoA = (TextView) findViewById(R.id.twoA);
+        resetTwoA.setText("" + twoA);
+        TextView resetFreeA = (TextView) findViewById(R.id.freeA);
+        resetFreeA.setText("" + freeA);
+        TextView resetThreeB = (TextView) findViewById(R.id.threeB);
+        resetThreeB.setText("" + threeB);
+        TextView resetTwoB = (TextView) findViewById(R.id.twoB);
+        resetTwoB.setText("" + twoB);
+        TextView resetFreeB = (TextView) findViewById(R.id.freeB);
+        resetFreeB.setText("" + freeB);
+    }
+}
